@@ -43,13 +43,18 @@ function calculate() {
     function calculating() {
       let addition_number = 0;
   
+      console.log(typeOfDeal)
       switch (typeOfDeal) {
-        case 'a': case 'c':
-          break;
-        case 'b': case 'd':
+        case 'b':
           if (stress) addition_number -= 0.1;
-          else addition_number += 0.1;
+          else addition_number += 0.01;
           break;
+        case 'd':
+            if (stress) addition_number -= 0.1;
+            else addition_number += 0.01;
+            break;
+        case 'a': break;
+        case 'c': break;
       }
   
       let TIME_SCORE = abilityToSpendTime * 150; //MAX 100
