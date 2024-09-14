@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Có nên mua không?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Có nên mua không?</h1>
+      <p>Chương trình được xây dựng nhằm giúp bạn lý trí hơn.</p>
+    </header>
+    
+    <main>
+      <section class="intro-section">
+        <p>Lúc bạn muốn mua cái gì đó hãy nghĩ tới app này. Biết đâu tôi sẽ cứu bạn khỏi một quyết định mà bạn sẽ hối hận trong tương lai. kkk</p>
+      </section>
+      
+      <section class="philosophy-section">
+        <h2>Áp dụng triết lý:</h2>
+        <ul>
+          <li>🧠 Người thông minh xài ít tiền nhất nhưng đạt hiệu quả cao nhất.</li>
+          <li>🎨 Nghệ thuật nằm ở sự tiết kiệm.</li>
+        </ul>
+      </section>
+      
+      <div class="form-group">
+        <label for="productCost">Giá thành món bạn muốn mua? (USD)</label>
+        <input type="number" id="productCost" name="productCost" required>
+      </div>
+      
+
+      <form id="purchase-form">
+        <div class="form-group">
+          <label for="income">Thu nhập mỗi tháng của bạn? (USD)</label>
+          <input type="number" id="income" name="income" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="survive">Bạn cần bao nhiêu để duy trì cuộc sống mỗi tháng? (USD)</label>
+          <input type="number" id="survive" name="survive" required>
+        </div>
+        
+
+        <div class="form-group">
+          <label for="typeOfDeal">1. Mua để làm gì?</label>
+          <select id="typeOfDeal" name="typeOfDeal" required>
+            <option value="a">a. Kiến thức (sách, khóa đào tạo, ...)</option>
+            <option value="b">b. Nuông chiều bản thân (những món không thật sự có giá trị nhưng giúp mình vui khi sở hữu)</option>
+            <option value="c">c. Ngoại hình (thời trang, mỹ phẩm, kiểu tóc,...)</option>
+            <option value="d">d. Lifestyle (bạn bè, dating, trải nghiệm,...)</option>
+            <option value="e">e. Đầu tư kinh doanh (không liên quan đến app này, hãy chọn một app khác)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="isRealValue">2. Giá trị món bạn muốn mua có thật không? Hay là đã được thổi phồng qua <b>‘Sales & Marketing’</b> ?</label>
+          <p class="percentage-explain">(100% là thật - 0% là ảo)</p>
+          <input type="range" id="isRealValue" name="isRealValue" min="0" max="1" step="0.01" value="1" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>100</output>%
+        </div>
+        
+        <div class="form-group">
+          <label for="isInFOMO">3. Nếu không mua <b>‘liền ngay và lập tức’</b> thì bạn sẽ tức điên lên? Hoặc bạn sợ sẽ bỏ lỡ cơ hội, từ đó khiến bạn hối tiếc về sau?</label>
+          <p class="percentage-explain">(100% là FOMO - 0% là bình tĩnh)</p>
+          <input type="range" id="isInFOMO" name="isInFOMO" min="0" max="1" step="0.01" value="0" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>0</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="abilityToSpendTime">4. Bạn có đủ thời gian và năng lượng để tối đa hóa giá trị của giao dịch này?</label>
+          <p class="percentage-explain">(100% là có dư thời gian - 0% là không có thời gian)</p>
+          <input type="range" id="abilityToSpendTime" name="abilityToSpendTime" min="0" max="1" step="0.01" value="0.8" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>80</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="compoundExpenditure">5. Món đồ này liệu có kéo bạn khỏi quỹ đạo cuộc sống và kéo theo nhu cầu mua những món đồ khác?</label>
+          <p><i>Ví dụ:</i></p>
+          <ol><i>
+            <li>Bạn nhuộm tóc màu trắng → từ đó kéo theo nhu cầu mua đồ thời trang & trang sức cho phù hợp với mái tóc trắng. → từ đó bạn sẽ có nhu cầu đi ra chỗ có view đẹp, sang trọng để chụp ảnh selfie → đăng Facebook / IG để rồi 6 tháng sau bạn ẩn đi vì không muốn ai thấy.</li>
+            <li>Bạn mua một bức tranh tuyệt đẹp, từ đó kéo theo nhu cầu sơn lại tường, mua lại bộ sofa, mua lại thảm cho xứng đáng với bức tranh.</li>
+            <li>Bạn mua bàn phím cơ ngầu và đẹp → từ đó có nhu cầu mua nguyên bộ PC mạnh cấu hình cao cấp cho xứng đáng với bàn phím.</li>
+        </i></ol>
+        <p class="percentage-explain">(100% là ảnh hưởng - 0% là không ảnh hưởng)</p>
+          <input type="range" id="compoundExpenditure" name="compoundExpenditure" min="0" max="1" step="0.01" value="0.3" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>30</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="purchaseImportance">6. Quyết định mua lần này là một quyết định lớn, quan trọng với cuộc đời bạn, hay là một trải nghiệm vô thưởng, vô phạt?</label>
+          <p class="percentage-explain">(100% là quyết định lớn - 0% là không quan trọng)</p>
+          <input type="range" id="purchaseImportance" name="purchaseImportance" min="0" max="1" step="0.01" value="1" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>100</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="negativeImpactOnLifeBalance">7. Nếu lần này bạn không mua, thì cuộc sống bạn có gặp rắc rối hoặc bế tắc không?</label>
+          <p class="percentage-explain">(100% là bế tắc - 0% là không)</p>
+          <input type="range" id="negativeImpactOnLifeBalance" name="negativeImpactOnLifeBalance" min="0" max="1" step="0.01" value="0.2" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>20</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="roiTimeHealthMoney">8. Bạn có nghĩ nhờ có quyết định mua này, trong tương lai kiếm nhiều tiền hơn, hạnh phúc hơn, hoặc tiết kiệm thời gian hơn không?</label>
+          <p class="percentage-explain">(100% là mọi thứ tốt hơn - 0% là không)</p>
+          <input type="range" id="roiTimeHealthMoney" name="roiTimeHealthMoney" min="0" max="1" step="0.01" value="0.9" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>90</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="bestDealPossible">9. Bạn đang có giá tốt nhất chưa? Hoặc bạn đã nỗ lực làm giá rẻ nhất có thể chưa?</label>
+          <p class="percentage-explain">(100% là giá tốt nhất - 0% là không)</p>
+          <input type="range" id="bestDealPossible" name="bestDealPossible" min="0" max="1" step="0.01" value="1" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>100</output>%
+        </div>
+
+        <div class="form-group">
+          <label for="freeAlternative">10. Nếu có cách nào đó không phải mua nhưng bạn vẫn đạt được mục đích? Một lối đi nào đó tối ưu chi phí hơn?</label>
+          <p class="percentage-explain">(100% là có lối khác free - 0% là không có cách nào)</p>
+          <input type="range" id="freeAlternative" name="freeAlternative" min="0" max="1" step="0.01" value="0" oninput="this.nextElementSibling.value = parseInt(this.value*100)">
+          <output>0</output>%
+        </div>
+        
+        <button type="button" onclick="calculate()">Tính toán</button>
+      </form>
+      
+      <div id="result"></div>
+    </main>
+    
+    <footer>
+      <p><strong>Disclaimer:</strong>  kết quả chỉ mang tính tham khảo. Quyết định sử dụng tiền của bạn nằm ở bạn.</p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
