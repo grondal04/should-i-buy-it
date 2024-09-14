@@ -47,7 +47,7 @@ function calculate() {
         case 'a': case 'c':
           break;
         case 'b': case 'd':
-          if (stress) addition_number -= 0.2 * stress;
+          if (stress) addition_number -= 0.1;
           else addition_number += 0.1;
           break;
       }
